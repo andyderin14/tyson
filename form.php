@@ -19,7 +19,7 @@ $asunto = 'Este email fue enviado desde la web de Kangre Burguerz'; // Asunto qu
 
 mail($destinatario, $asunto , utf8_decode($mensaje) , $header);
 
-header('Location:exito.html');
+header('Location.exito.html');
 
 
 ?>

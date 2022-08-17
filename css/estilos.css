@@ -4,105 +4,57 @@
     box-sizing: border-box;
 }
 
-.fondo__color {
-    background-color: rgba(0, 0, 0, 0.775);
+.fondo__dePantalla {
+        background-repeat: no-repeat;
+        background-position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        position: fixed;
+}
+
+.logo__tyson {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 90%;
+    height: 250px;
+    margin: 15px;
+
 }
 
 .header {
     margin-bottom: 15px;
 }
 
-
-span {
-    color: red;
-    -webkit-text-stroke: 1px black;
-    font-size: 37px;
+.nav__header {
+    padding: 0;
 }
 
-.fotos {
-        display: grid;
-        grid-template-columns: repeat(3 , 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-        "foto1 foto2 foto3"
-        "foto4 foto5 foto6"
-        "foto7 foto8 foto9";
-        column-gap: 1rem;
-        row-gap: 1rem;
-        -webkit-text-stroke: 0.1px  white;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        background-color: grey;
-        text-align: center;
-        border: 2px solid black;
-        box-shadow: 4px 4px red;
-        padding: 1rem;
-        margin: 1rem;
+.nav-link {
+    background-color: black;
+    width: 90%;
+    margin: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-/* .fotos__contenido {
-    
-} */
-
-.fotos__contenido--1 {
-    grid-area: foto1;
-    background-color: white;
-    border: 2px solid black;
-}
-
-.fotos__contenido--2 {
-    grid-area: foto2;
-    background-color: white;
-    border: 2px solid black;
-}
-
-.fotos__contenido--3 {
-    grid-area: foto3;
-    background-color: white;
-    border: 2px solid black;
-}
-
-.fotos__contenido--4 {
-    grid-area: foto4;
-    background-color: white;
-    border: 2px solid black;
-}
-
-.fotos__contenido--5 {
-    grid-area: foto5;
-    background-color: white;
-    border: 2px solid black;
-}
-
-.fotos__contenido--6 {
-    grid-area: foto6;
-    background-color:white;
-    border: 2px solid black;
-}
-
-.fotos__contenido--7 {
-    grid-area: foto7;
-    background-color:white;
-    border: 2px solid black;
-}
-
-.fotos__contenido--8 {
-    grid-area: foto8;
-    background-color: white;
-    border: 2px solid black;
-}
-
-.fotos__contenido--9 {
-    grid-area: foto9;
-    background-color: white;
-    border: 2px solid black;
+.nav-link:hover {
+   color: red;
 }
 
 .cuadro__principal {
     display: flex;
     flex-direction: column;
-    background-color: grey;
-    border: 2px solid black;
-    box-shadow: 4px 4px red;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
     padding: 1rem;
     margin: 1rem;
 }
@@ -112,7 +64,7 @@ span {
     flex-direction: column;
     color: white;
     -webkit-text-stroke: 1px  black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
     font-size: 35px;
     font-weight: bold;
     text-align: center;
@@ -120,23 +72,33 @@ span {
 
 .links {
     font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow';
     font-size: 12px;
     text-align: center;
 }
 
 .form-label {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow';
-        color: red;
+        color: white;
         font-size: 45px;
         -webkit-text-stroke: 1px  black;
 }
 
 .btn-light {
-    font-size: 30px;
-    color: red;
-    -webkit-text-stroke: 1px  black;
-    background-color:  grey;
-    border: 2px solid black;
-    box-shadow: 2px 2px red;
+    font-size: 25px;
+    color: white;
+    background-color:  black;
+    border-radius: 5px;
+}
+
+.titulo__muchasGracias {
+    font-size: 35px;
+    color: white;
+    border-radius: 5px;
+    background-color:  black;
+    border: 1px solid white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+    width: 90%;
+    margin: 15px;
+    
 }
