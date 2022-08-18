@@ -15,13 +15,13 @@
 
 <body>
 
-        <img class="fondo__dePantalla" src="./imagenes/fondo pantalla tyson web developer.jpg" alt="foto fondo de pantalla">
+        <img class="fondo__dePantalla" src="./imagenes/fondo pantalla tyson web developer 4.jpg" alt="foto fondo de pantalla">
 
     <header class="header">
 
+        <img class="logo__tyson" src="./imagenes/Logo Oficial Tyson Web Developer.png" alt="logo" width="100" height="100">
+
         <ul class="nav__header justify-content-end">
-            
-            <img class="logo__tyson" src="./imagenes/Logo Oficial Tyson Web Developer.png" alt="logo" width="100" height="100">
 
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
@@ -46,47 +46,54 @@
 
                 <!-- Action: Escribir la ruta del archivo php -->
                 <!-- Method: POST -->
-            <form action="form.php" method="post">
-                <div>
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input id="nombre" type="text" name="nombre" placeholder="Nombre"/>
+            <form action="form.php" method="post" class="form__formulario">
+                <div class="form-label">
+                    <label for="nombre" >Nombre</label>
+                    <input class="form-control" id="nombre" type="text" name="nombre" placeholder="Nombre"/>
                 </div>
 
-                <div>
-                    <label for="comentario" class="form-label">Dejanos tu Kangre comentario</label>
+                <div class="form-label">
+                    <label for="email" >Email</label>
+                    <input class="form-control" id="email" type="email" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-label">
+                    <label for="comentario" >Contactame</label>
                     <textarea class="form-control" name="mensaje" id="comentario" placeholder="Ingresar comentario"></textarea>
                 </div>
 
-                <div>
-                    <button class="btn-light" type="submit">Enviar</button>
+                <div class="form-label">
+                    <button class="btn-light form-control" type="submit">Enviar</button>
                 </div>
             </form>
-
+            
 
     </main>
 
     <footer>
-        <div class="cuadro__principal">
-            <h1 class="cuadro__contenidos">Redes Sociales</h1>
+        <div class="redes__titulo">
+            <h1>Redes Sociales</h1>
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="cuadro__principal">
-                        <h2 class="links">"http://www.tucancionero.com"</h2>
-                        <!-- <a href="https://www.acordes.lacuerda.net/" target="_blank"></a> -->
+                    <div class="redes__links">
+                        <a href="https://www.instagram.com/andyderin14/" target="_blank"></a>
                     </div>
                     
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="cuadro__principal">
-                        <h2 class="links">"http://www.yoursongfavorites.com"</h2>
-                        <!-- <a href="https://www.acordes.lacuerda.net/" target="_blank"></a> -->
+                    <div class="redes__links">
+                        <a href="http://www.instagram.com/andyderin14/" target="_blank"></a>
                     </div>
                     
                 </div>
             </div>
+        </div>
+
+        <div class="copyright">
+            <h3>© Copyright T/SON</h3>
         </div>
         
     </footer>
