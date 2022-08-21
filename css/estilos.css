@@ -20,7 +20,6 @@
     border: 1px solid white;
     border-radius: 5px;
     margin-bottom: 15px;
-    object-fit: cover;
 }
 
 .header {
@@ -42,7 +41,7 @@
     font-size: 23px;
 }
   .nav-link:hover {
-        color: green;
+        color: red;
      }
 
 .form-label {
@@ -97,6 +96,28 @@
     margin: 15px;   
 }
 
+.carousel-caption {
+    color: white;
+    font-family: Tahoma, sans-serif;
+    border-radius: 5px;
+    background-color:  black;
+}
+
+.carousel {
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+.carousel img {
+    width: 80%;
+    height: 235px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
 .redes__titulo {
     font-family: Tahoma, sans-serif;
     color: white;
@@ -130,9 +151,8 @@
     padding-top: 10px;
 }
 
-
-
 @media screen and (min-width: 599px) {
+
     .logo__tyson {
         width: 60%;
         height: 350px;
