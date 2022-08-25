@@ -85,6 +85,11 @@
     align-items: flex-end;
 }
 
+.modal__muchasGracias {
+    background-color:  black;
+    border: 1px solid white;
+}
+
 .titulo__muchasGracias {
     font-size: 35px;
     color: white;
@@ -99,8 +104,6 @@
 .carousel-caption {
     color: white;
     font-family: Tahoma, sans-serif;
-    border-radius: 5px;
-    background-color:  black;
 }
 
 .carousel {

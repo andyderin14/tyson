@@ -2,88 +2,107 @@
 <html lang="en">
 
 <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="shortcut icon" href="../imagenes/Screenshot_tyson.jpg">
-          <title>Contacto</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagenes/Screenshot_tyson.jpg">
+    <title>Contacto</title>
 
 
-          <!--Vinculación Bootstrap CDN -->
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-                    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-                    crossorigin="anonymous">
-          <!--Vinculación Estilos propios de CSS -->
-          <link rel="stylesheet" href="../css/estilos.css">
+    <!--Vinculación Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Vinculación Estilos propios de CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
-          <img class="fondo__dePantalla" src="../imagenes/fondo pantalla tyson web developer 4.jpg"
-                    alt="foto fondo de pantalla">
+    <img class="fondo__dePantalla" src="../imagenes/fondo pantalla tyson web developer 4.jpg"
+        alt="foto fondo de pantalla">
 
 
-          <header>
-                    <ul class="nav nav__header justify-content-end">
-                              <li><a class="nav-link" aria-current="page" href="../index.html">Inicio</a></li>
-                              <li><a class="nav-link" href="./sobremi.html">Sobre mi</a></li>
-                              <li><a class="nav-link" href="./proyectos.html">Proyectos realizados</a></li>            
-                    </ul>
-          </header>
+    <header>
+        <ul class="nav nav__header justify-content-end">
+            <li><a class="nav-link" aria-current="page" href="../index.html">Inicio</a></li>
+            <li><a class="nav-link" href="./sobremi.html">Sobre mi</a></li>
+            <li><a class="nav-link" href="./proyectos.html">Proyectos realizados</a></li>
+        </ul>
+    </header>
 
-          <main>
-
-
-                    <form action="form.php" method="POST">
-                              <div class="row">
-                                  <div class="col">
-                                      <label for="name" class="form-label">Nombre</label>
-                                      <input type="text" class="form-control" id="name" name="name" placeholder="Nombre"
-                                          aria-label="First name">
-                                  </div>
-                                  <div class="col">
-                                      <label for="lastname" class="form-label">Apellido</label>
-                                      <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido"
-                                          aria-label="Last name">
-                                  </div>
-                              </div>
-                              <div class="mb-3">
-                                  <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                  <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
-                                      placeholder="nombre@ejemplo.com">
-                              </div>
-                              <div class="mb-3">
-                                  <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
-                                  <textarea class="form-control" id="exampleFormControlTextarea1" name="textarea" rows="3"
-                                      placeholder="Escribe tu comntario"></textarea>
-                              </div>
-                              <button type="submit" class="btn btn-primary">Enviar</a></button>
-                    </form>
+    <main>
 
 
-          </main>
-
-
-          <footer class="footer__tyson">
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <img class="logo__tyson" src="../imagenes/Logo Oficial Tyson Web Developer2.png" alt="logotyson"
-                            width="100" height="100">
-                    </div>
-                    <div class="col-12 copyright">
-                        <p class="copyright__tipografia">© Copyright T/SON</p>
+        <form action="form.php" method="POST">
+            <div class="row">
+                <div class="col">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre"
+                        aria-label="First name">
+                </div>
+                <div class="col">
+                    <label for="lastname" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido"
+                        aria-label="Last name">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
+                    placeholder="nombre@ejemplo.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="textarea" rows="3"
+                    placeholder="Escribe tu comntario"></textarea>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Enviar
+                    </button>
+            </div>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content modal__muchasGracias">
+                        <div class="modal-header form-control">
+                            <p class="modal-title" id="staticBackdropLabel">¡Muchas Gracias por tu mensaje!</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Agradecemos tu mensaje. Juntos seguimos creciendo!<span><br/>TEAM Kangre Burguerz.</span></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-          </footer>
+        </form>
 
-          <!--Vinculación CDN de Bootstrap para JS -->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                    crossorigin="anonymous"></script>
+
+    </main>
+
+
+    <footer class="footer__tyson">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img class="logo__tyson" src="../imagenes/Logo Oficial Tyson Web Developer2.png" alt="logotyson"
+                        width="100" height="100">
+                </div>
+                <div class="col-12 copyright">
+                    <p class="copyright__tipografia">© Copyright T/SON</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!--Vinculación CDN de Bootstrap para JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
