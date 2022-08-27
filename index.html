@@ -16,12 +16,12 @@
 
 <body class="body__Fondo"> 
 
-    <header class="fondo__dePantalla">
+    <header>
 
         <ul class="nav nav__header justify-content-end">
-            <li><a class="nav-link" aria-current="page" href="./sobremi.html">Sobre mi</a></li>
+            <li><a class="nav-link" aria-current="page" href="./paginas/sobremi.html">Sobre mi</a></li>
             <li><a class="nav-link" href="./paginas/proyectos.html">Proyectos realizados</a></li>
-            <li><a class="nav-link" href="./contacto.html">Contacto</a></li>
+            <li><a class="nav-link" href="./paginas/contacto.html">Contacto</a></li>
         </ul>
     </header>
 
@@ -65,7 +65,7 @@
             </div>
         </form> -->
         <div class="form-label">
-            <h2>Diseño de Logos</h2>
+            <h2  class="diseñoLogo">Diseño de Logos</h2>
         </div>
         <section class="carrusel__tyson">
             <div class="container">
@@ -141,30 +141,42 @@
         </div>
 
         <main>
+         
             <script>
                 let entrada = prompt("¿De que club de fútbol sos hincha?");
                 let salida = "El club: " + entrada + ", es el mejor equipo del país!";
                 alert(salida);
+
+                let numero1 = Number(prompt("Cuántos goles le hizo River a Boca en la final de la Copa Libertadores de América del 2018 en Madrid?"));
+                let goles = "Además de hacerle " + numero1 + " goles en esa final, River le ganó la Super Copa Argentina en Mendoza ese mismo año.";
+                alert(goles)
             </script>
 
         </main>
 
-        <footer class="footer__tyson">
+        <footer>
+
             <div class="redes__titulo">
                 <h1>Redes Sociales</h1>
             </div>
 
             <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="redes__links">
-                            <a href="https://www.instagram.com/andyderin14/" target="_blank"></a>
+                <div class="row redes__redes">
+                    <div class="col-12 col-md-4">
+                        <div>
+                            <a href="https://www.instagram.com/andyderin14/" target="_blank" class="redes__links">Instagram</a>
                         </div>
 
                     </div>
-                    <div class="col-12 col-md-6">
-                        <div class="redes__links">
-                            <a href="http://www.instagram.com/andyderin14/" target="_blank"></a>
+                    <div class="col-12 col-md-4">
+                        <div>
+                            <a href="https://www.github.com/andyderin14" target="_blank" class="redes__links">GitHub</a>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div>
+                            <a href="https://www.linkedin.com/in/andr%C3%A9s-juli%C3%A1n-derin-4520271b9/" target="_blank" class="redes__links">LinkedIn</a>
                         </div>
 
                     </div>
@@ -177,7 +189,7 @@
                         <img class="logo__tyson" src="./imagenes/Logo Oficial Tyson Web Developer2.png" alt="logotyson"
                             width="100" height="100">
                     </div>
-                    <div class="col-12 copyright">
+                    <div class="col-12">
                         <p class="copyright__tipografia">© Copyright T/SON</p>
                     </div>
                 </div>

@@ -5,57 +5,63 @@
 }
 
 .body__Fondo {
-    background-color: #5e5e5e;
-}
-
-.fondo__dePantalla {
     background-image: url(../imagenes/fondo\ pantalla\ tyson\ web\ developer\ 4.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
-    border: 1px solid white;
+   
 }
 
 .logo__tyson {
     width: 100%;
     border: 1px solid white;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .header {
     margin-bottom: 10px;
 }
 
-/* .nav__header {
-    padding: 0;
-} */
+.nav__header {
+    color: white;
+    background-color:  black;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+    .nav__header:hover {
+        color: red;
+    }
 
 .nav-link {
-    background-color: black;
-    margin: 15px;
-    border: 1px solid white;
-    border-radius: 5px;
-    font-family: Tahoma, sans-serif;
-    color: white;
-    font-weight: bold;
-    font-size: 23px;
+     font-family: Tahoma, sans-serif;
+    color: white;   
+    font-size: 30px;
 }
   .nav-link:hover {
         color: red;
      }
 
+.diseñoLogo {
+    color: white;
+    width: 70%;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: center;
+    padding-bottom: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
 .form-label {
-        font-family: Tahoma, sans-serif;
-        color: white;
-        font-size: 20px;
-        width: 80%;
-        margin: 10px;
-        background-color: black;
-        border: 1px solid white;
-        border-radius: 5px;
-        text-align: center;
+    color: white;
+    width: 50%;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: center;
 }
 
 .form-control {
@@ -112,7 +118,7 @@
     margin: 0 auto;
     border: 1px solid white;
     border-radius: 5px;
-
+    margin-bottom: 10px;
 }
 
 .carousel img {
@@ -126,34 +132,44 @@
 .redes__titulo {
     font-family: Tahoma, sans-serif;
     color: white;
-    font-size: 25px;
-    width: 90%;
-    margin: 15px;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 5px;
+    font-size: 30px;
     text-align: center;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+.redes__redes {
+    width: 50%;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .redes__links {
+    color: white;
     font-size: 20;
 }
 
-.copyright {
-    margin: 0 auto;
-    width: 60%;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 5px; 
-    margin-bottom: 15px;   
-}
-
 .copyright__tipografia {
+    margin: 0 auto;
+    width: 65%;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid white;
     font-family: Tahoma, sans-serif;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-    padding-top: 10px;
+    padding-bottom: 3px;
 }
 
 @media screen and (min-width: 599px) {
