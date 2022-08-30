@@ -5,7 +5,7 @@
 }
 
 .body__Fondo {
-    background-image: url(../imagenes/fondo\ pantalla\ tyson\ web\ developer\ 4.jpg);
+    background-image: linear-gradient(to right, #d11c1e, #ba1d1c, #a41d1a, #8e1c18, #791b16, #6a1915, #5c1613, #4e1411, #42110f, #360e0b, #2b0a06, #210300);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
