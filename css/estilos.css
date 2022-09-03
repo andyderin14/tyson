@@ -5,12 +5,10 @@
 }
 
 .body__Fondo {
-    background-image: linear-gradient(to right, #d11c1e, #ba1d1c, #a41d1a, #8e1c18, #791b16, #6a1915, #5c1613, #4e1411, #42110f, #360e0b, #2b0a06, #210300);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    object-fit: cover;
+    background-image: linear-gradient(to bottom, #4d4d4d, #454545, #3d3d3d, #353535, #2d2d2d, #282828, #242424, #1f1f1f, #1c1c1c, #1a1a1a, #171717, #141414);
+    
    
+
 }
 
 .logo__tyson {
@@ -26,22 +24,26 @@
 
 .nav__header {
     color: white;
-    background-color:  black;
+    background-image: url(../imagenes/fondo\ pantalla\ tyson\ web\ developer\ 2.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
     border-bottom: 2px solid white;
     margin-bottom: 10px;
 }
-    .nav__header:hover {
-        color: red;
-    }
+
+.nav__header:hover {
+    color: red;
+}
 
 .nav-link {
-     font-family: Tahoma, sans-serif;
-    color: white;   
+    font-family: Tahoma, sans-serif;
+    color: white;
     font-size: 30px;
 }
-  .nav-link:hover {
-        color: red;
-     }
+
+.nav-link:hover {
+    color: red;
+}
 
 .formulario {
     color: white;
@@ -88,7 +90,7 @@
 .btn {
     font-size: 18px;
     color: white;
-    background-color:  black;
+    background-color: black;
     border: 1px solid white;
     border-radius: 5px;
     display: flex;
@@ -96,7 +98,7 @@
 }
 
 .modal__muchasGracias {
-    background-color:  black;
+    background-color: black;
     border: 1px solid white;
 }
 
@@ -104,11 +106,11 @@
     font-size: 35px;
     color: white;
     border-radius: 5px;
-    background-color:  black;
+    background-color: black;
     border: 1px solid white;
     font-family: Tahoma, sans-serif;
     width: 90%;
-    margin: 15px;   
+    margin: 15px;
 }
 
 .carousel-caption {
@@ -174,6 +176,70 @@
     padding-bottom: 3px;
 }
 
+/* Sidebar */
+#sidebar-wrapper {
+    z-index: 1;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    overflow-y: hidden;
+    background: #5b4282;
+    opacity: 0.9;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+}
+
+/* Main Content */
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+    transition: all .5s;
+}
+
+#menu-toggle {
+    transition: all .3s;
+    font-size: 2em;
+}
+
+/* Change the width of the sidebar to display it*/
+#wrapper.menuDisplayed #sidebar-wrapper {
+    width: 250px;
+}
+
+#wrapper.menuDisplayed #page-content-wrapper {
+    padding-left: 250px;
+}
+
+/* Sidebar styling */
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+    transition: all .5s;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-nav li {
+    line-height: 40px;
+    width: 100%;
+    transition: all .3s;
+    padding: 10px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+}
+
+.sidebar-nav li:hover {
+    background: #846bab;
+}
+
+
+
 @media screen and (min-width: 599px) {
 
     .logo__tyson {
@@ -183,7 +249,7 @@
     }
 
     .fondo__dePantalla {
-        object-fit:fill;
+        object-fit: fill;
         height: 100%;
         width: 100%;
         top: 0;
@@ -191,5 +257,5 @@
         z-index: -1;
         position: fixed;
     }
-    
+
 }
