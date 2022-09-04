@@ -149,6 +149,7 @@
                 let equipoFavorito = '';
                 let formacionIdeal = 0;
                 let equipoIdeal = true;
+                let jugadores = [];
 
                 do {
                     equipoFavorito = prompt('Escriba el nombre de su equipo favorito.');
@@ -157,46 +158,37 @@
                         formacionIdeal = parseInt(prompt('Ingrese su formacion ideal.', 'Ej: 442, 433, 352, etc..'));
                     }
 
-                    for (let i = 0; i < 11; i++);
+                    for (let i = 0; i < 11; i++) {
 
-                    jugadorNumero1 = prompt('Ingresar el nombre de su jugador número 1.');
-                    jugadorNumero2 = prompt('Ingrese el nombre de su jugador número 2');
-                    jugadorNumero3 = prompt('Ingrese el nombre de su jugador número 3.');
-                    jugadorNumero4 = prompt('Ingrese el nombre de su jugador número 4.');
-                    jugadorNumero5 = prompt('Ingrese el nombre de su jugador número 5.');
-                    jugadorNumero6 = prompt('Ingrese el nombre de su jugador número 6.');
-                    jugadorNumero7 = prompt('Ingrese el nombre de su jugador número 7.');
-                    jugadorNumero8 = prompt('Ingrese el nombre de su jugador número 8.');
-                    jugadorNumero9 = prompt('Ingrese el nombre de su jugador número 9.');
-                    jugadorNumero10 = prompt('Ingrese el nombre de su jugador número 10.');
-                    jugadorNumero11 = prompt('Ingrese el nombre de su jugador número 11.');
+                        jugadores[i] = prompt('Ingresar el nombre de su jugador número ' + (i + 1));
 
+                    }
 
                     equipoIdeal = confirm('¿Estás seguro que éste es tu equipo ideal?');
-                    equipoIdeal = false;
-                } while (equipoIdeal)
 
+                } while (!equipoIdeal)
 
                 alert(`
 Su equipo favorito es: ${equipoFavorito}.
 Su formacion ideal es: ${formacionIdeal}.
 Su 11 ideal es:
-N°1 ${jugadorNumero1}.
-N°2 ${jugadorNumero2}.
-N°3 ${jugadorNumero3}.
-N°4 ${jugadorNumero4}.
-N°5 ${jugadorNumero5}.
-N°6 ${jugadorNumero6}.
-N°7 ${jugadorNumero7}.
-N°8 ${jugadorNumero8}.
-N°9 ${jugadorNumero9}.
-N°10 ${jugadorNumero10}.
-N°11 ${jugadorNumero11}.
+N°1 ${jugadores[0]}.
+N°2 ${jugadores[1]}.
+N°3 ${jugadores[2]}.
+N°4 ${jugadores[3]}.
+N°5 ${jugadores[4]}.
+N°6 ${jugadores[5]}.
+N°7 ${jugadores[6]}.
+N°8 ${jugadores[7]}.
+N°9 ${jugadores[8]}.
+N°10 ${jugadores[9]}.
+N°11 ${jugadores[10]}.
 `)
 
                 let finalizarEncuesta = confirm('¿Desea terminar con esta encuesta?');
 
                 if (finalizarEncuesta) alert('Gracias por participar en esta encuesta.');
+
 
             </script>
 
