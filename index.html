@@ -146,49 +146,84 @@
         <main>
 
             <script>
-                let equipoFavorito = '';
-                let formacionIdeal = 0;
-                let equipoIdeal = true;
-                let jugadores = [];
+// Desafío obligatorio - Simulador interactivo //
 
-                do {
-                    equipoFavorito = prompt('Escriba el nombre de su equipo favorito.');
-                    formacionIdeal = parseInt(prompt('Ingrese su formacion ideal.', 'Ej: 442, 433, 352, etc..'));
-                    while (isNaN(formacionIdeal) || formacionIdeal < 0) {
-                        formacionIdeal = parseInt(prompt('Ingrese su formacion ideal.', 'Ej: 442, 433, 352, etc..'));
+
+function saludar() {
+    alert("Hola bienvenido a Guilbas Urban Wear");
+}
+saludar ();
+
+const comprarProductos = () => {
+let productoVerano = 0;
+let productoInvierno = 0;
+let cantidad = 0;
+let precioProducto = 0;
+let precioCompra= 0;
+let seguirComprando = false;
+
+do {
+    let estacion = 0;
+    do {
+    estacion = parseInt(prompt('Seleccione la estación de la indumentaria que desee comprar:\n1) Verano;\n2) Invierno.'));
+        }while (estacion != 1 && estacion != 2)
+          if (estacion === 1) {
+            do {
+            productoVerano = parseInt(prompt('Seleccione que indumentaria de verano desea comprar:\n1) Remera $2.500;\n2) Musculosa $2000;\n3) Bermuda $4.000.'));
+            } while (productoVerano != 1 && productoVerano != 2 && productoVerano != 3);
+          switch (productoVerano) {
+                    case 1:
+                              precioProducto = 2500;
+                    break;
+                    case 2:
+                              precioProducto = 2000;
+                    break;
+                    case 3:
+                              precioProducto = 4000;
+                    break;
+                }
+        } else if (estacion === 2) {
+            do {
+                productoInvierno = parseInt(prompt('Seleccione que indumentaria desea comprar:\n4) Campera de abrigo $15.000;\n5) Buzo de Polar $8.000;\n6) Jogging de Friza $5.500'));
+            }while (productoInvierno != 4 && productoInvierno != 5 && productoInvierno != 6);
+            switch (productoInvierno) {
+                    case 4:
+                        precioProducto = 15000;
+                        break;
+                    case 5:
+                        precioProducto = 8000;
+                        break;
+                    case 6:
+                        precioProducto = 5500;
+                        break;
                     }
+          }
+          cantidad = parseInt(prompt('¿Cuántas prendas desea comprar?'));
+          while (isNaN(cantidad)) {
+                    cantidad = parseInt(prompt('¿Cuántas prendas desea comprar?'));
+          }
+precioCompra += precioProducto * cantidad;
+seguirComprando = confirm("¿Querés agregar otra prenda?");
+} while (seguirComprando)
+return precioCompra;
+}
 
-                    for (let i = 0; i < 11; i++) {
+const calcularEnvio = (precioCompra) => {
+let envio = confirm('¿Querés envío a domicilio? (Gratis superando los $20.000 en tu compra, si no, costo adicional $500 en ciudad o alrededores.');
+          if (envio && precioCompra >= 20000) {
+                    alert('Tenes envío gratis a tu domicilio. El precio total de tu compra es de: $' + precioCompra + '.');
+          }
+          else if (envio && precioCompra < 20000 && precioCompra !=0){
+                    alert('El envío hasta tu domicilio cuesta $500. El precio total de tu compra es de: $' + (precioCompra + 500 )+ '.');
+          } else {
+                    alert('El precio total de tu compra es de: $' + precioCompra + '.');
+          }
+return precioCompra;
+}
 
-                        jugadores[i] = prompt('Ingresar el nombre de su jugador número ' + (i + 1));
+calcularEnvio(comprarProductos());
 
-                    }
-
-                    equipoIdeal = confirm('¿Estás seguro que éste es tu equipo ideal?');
-
-                } while (!equipoIdeal)
-
-                alert(`
-Su equipo favorito es: ${equipoFavorito}.
-Su formacion ideal es: ${formacionIdeal}.
-Su 11 ideal es:
-N°1 ${jugadores[0]}.
-N°2 ${jugadores[1]}.
-N°3 ${jugadores[2]}.
-N°4 ${jugadores[3]}.
-N°5 ${jugadores[4]}.
-N°6 ${jugadores[5]}.
-N°7 ${jugadores[6]}.
-N°8 ${jugadores[7]}.
-N°9 ${jugadores[8]}.
-N°10 ${jugadores[9]}.
-N°11 ${jugadores[10]}.
-`)
-
-                let finalizarEncuesta = confirm('¿Desea terminar con esta encuesta?');
-
-                if (finalizarEncuesta) alert('Gracias por participar en esta encuesta.');
-
+alert('Desde Guilbas Urban Wear agradecemos tu compra, te esperamos pronto!');
 
             </script>
 
