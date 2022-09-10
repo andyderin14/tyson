@@ -240,10 +240,9 @@ function saludar() {
           }
                 while (envio != 1 && envio != 2);
                     if (envio === 1) {
-                          alert('El precio total de tu compra es de: $' + (precioCompra + 500) + '.');
-                }
-                else if (envio ===2) {
-                          alert('El precio total de tu compra es de: $' + precioCompra + '.');
+                            (alert('Su compra se realizó en 3 cuotas sin interés de $' + (precioCompra / 3).toFixed(2) + '.'));
+                     } else {
+                            (alert('Su compra se realizó en 6 cuotas sin interés de $' + (precioCompra / 6).toFixed(2) + '.'));
                 }
       return precioCompra;
       }
