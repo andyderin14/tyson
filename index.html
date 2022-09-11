@@ -210,10 +210,11 @@ function saludar() {
 
       let pago = 0;
       let tarjeta = 0;
-
+      let descuento = 0;
+      let precioFinal =0;
       const formaDePago = (precioCompra) => {
           do {
-          pago = parseInt(prompt('Seleccione la forma de pago que desee:\n1) Efectivo (Descuento del 20% en compra superior o igual a $30.000.);\n2) Tarjeta (3 o 6 cuotas sin interés).'));
+          pago = parseInt(prompt('Seleccione la forma de pago que desee:\n1) Efectivo (Descuento del 10% en compra superior o igual a $30.000.);\n2) Tarjeta (3 o 6 cuotas sin interés).'));
               } while (pago != 1 && pago != 2);
               if (pago === 2) {
                     do {
@@ -226,30 +227,36 @@ function saludar() {
                      }
                      return precioCompra;
               } else if (pago === 1 && precioCompra >= 30000) {
-                    alert('Por su compra en efectivo de más de $30000, su descuento es de: $' + (precioCompra * 0.20) + '.');
-                    return precioCompra;
+                descuento = precioCompra*0.10;
+                precioFinal= (precioCompra - descuento);
+                    alert('Por su compra en efectivo de más de $30000, su descuento es de: $' + descuento + '. La compra se realizó en $' + precioFinal + '.');
+                    return precioFinal;
               } else if (pago === 1 && precioCompra < 30000) {
                     return precioCompra;
               }
       }
 
       let envio = 0;
-      const calcularEnvio = (precioCompra) => {
+      const calcularEnvio = (precioCompra, precioFinal) => {
           do {
           envio = parseInt(prompt('¿Querés envío a domicilio? (costo adicional $500 en ciudad o alrededores).\n1) Si;\n2) No.'));
           }
                 while (envio != 1 && envio != 2);
-                    if (envio === 1) {
-                          alert('El precio total de tu compra es de: $' + (precioCompra + 500) + '.');
-                }
-                else if (envio ===2) {
-                          alert('El precio total de tu compra es de: $' + precioCompra + '.');
+                if (envio === 1 && precioCompra >= 30000){
+                    return precioFinal;
+                          alert('El precio total de tu compra + el envío es de: $' + (precioFinal + 500) + '.');
+                } else if (envio === 1){
+                    alert('El precio total de tu compra + el envío es de: $' + (precioCompra + 500) + '.');
+                } else if (envio === 2 && precioCompra >=30000) {
+                        alert('El precio total de tu compra es de: $' + precioFinal + '.');
+                        return precioFinal;
+                } else if (envio === 2) {
+                alert('El precio total de tu compra es de: $' + precioCompra + '.');
                 }
       return precioCompra;
       }
       
       calcularEnvio(formaDePago(comprarProductos()));
-      
       alert('Desde Guilbas Urban Wear agradecemos tu compra, te esperamos pronto!');
             </script>
 
