@@ -149,116 +149,116 @@
 // Desafío obligatorio - Simulador interactivo //
 
 
-function saludar() {
-          alert("Hola bienvenido a Guilbas Urban Wear");
-      }
-      saludar ();
+// function saludar() {
+//           alert("Hola bienvenido a Guilbas Urban Wear");
+//       }
+//       saludar ();
       
-      const comprarProductos = () => {
-      let productoVerano = 0;
-      let productoInvierno = 0;
-      let cantidad = 0;
-      let precioProducto = 0;
-      let precioCompra= 0;
-      let seguirComprando = false;
+//       const comprarProductos = () => {
+//       let productoVerano = 0;
+//       let productoInvierno = 0;
+//       let cantidad = 0;
+//       let precioProducto = 0;
+//       let precioCompra= 0;
+//       let seguirComprando = false;
       
-      do {
-          let estacion = 0;
-          do {
-          estacion = parseInt(prompt('Seleccione la estación de la indumentaria que desee comprar:\n1) Verano;\n2) Invierno.'));
-              }while (estacion != 1 && estacion != 2)
-                if (estacion === 1) {
-                  do {
-                  productoVerano = parseInt(prompt('Seleccione que indumentaria de verano desea comprar:\n1) Remera $2.500;\n2) Musculosa $2000;\n3) Bermuda $4.000.'));
-                  } while (productoVerano != 1 && productoVerano != 2 && productoVerano != 3);
-                switch (productoVerano) {
-                          case 1:
-                                    precioProducto = 2500;
-                          break;
-                          case 2:
-                                    precioProducto = 2000;
-                          break;
-                          case 3:
-                                    precioProducto = 4000;
-                          break;
-                      }
-              } else if (estacion === 2) {
-                  do {
-                      productoInvierno = parseInt(prompt('Seleccione que indumentaria desea comprar:\n1) Campera de abrigo $15.000;\n2) Buzo de Polar $8.000;\n3) Jogging de Friza $5.500'));
-                  }while (productoInvierno != 1 && productoInvierno != 2 && productoInvierno != 3);
-                  switch (productoInvierno) {
-                          case 1:
-                              precioProducto = 15000;
-                              break;
-                          case 2:
-                              precioProducto = 8000;
-                              break;
-                          case 3:
-                              precioProducto = 5500;
-                              break;
-                          }
-                }
-                cantidad = parseInt(prompt('¿Cuántas prendas desea comprar?'));
-                while (isNaN(cantidad)) {
-                          cantidad = parseInt(prompt('¿Cuántas prendas desea comprar?'));
-                }
-      precioCompra += precioProducto * cantidad;
-      seguirComprando = confirm("¿Querés agregar otra prenda?");
-      } while (seguirComprando)
-      return precioCompra;
-      }
+//       do {
+//           let estacion = 0;
+//           do {
+//           estacion = parseInt(prompt('Seleccione la estación de la indumentaria que desee comprar:\n1) Verano;\n2) Invierno.'));
+//               }while (estacion != 1 && estacion != 2)
+//                 if (estacion === 1) {
+//                   do {
+//                   productoVerano = parseInt(prompt('Seleccione que indumentaria de verano desea comprar:\n1) Remera $2.500;\n2) Musculosa $2000;\n3) Bermuda $4.000.'));
+//                   } while (productoVerano != 1 && productoVerano != 2 && productoVerano != 3);
+//                 switch (productoVerano) {
+//                           case 1:
+//                                     precioProducto = 2500;
+//                           break;
+//                           case 2:
+//                                     precioProducto = 2000;
+//                           break;
+//                           case 3:
+//                                     precioProducto = 4000;
+//                           break;
+//                       }
+//               } else if (estacion === 2) {
+//                   do {
+//                       productoInvierno = parseInt(prompt('Seleccione que indumentaria desea comprar:\n1) Campera de abrigo $15.000;\n2) Buzo de Polar $8.000;\n3) Jogging de Friza $5.500'));
+//                   }while (productoInvierno != 1 && productoInvierno != 2 && productoInvierno != 3);
+//                   switch (productoInvierno) {
+//                           case 1:
+//                               precioProducto = 15000;
+//                               break;
+//                           case 2:
+//                               precioProducto = 8000;
+//                               break;
+//                           case 3:
+//                               precioProducto = 5500;
+//                               break;
+//                           }
+//                 }
+//                 cantidad = parseInt(prompt('¿Cuántas prendas desea comprar?'));
+//                 while (isNaN(cantidad)) {
+//                           cantidad = parseInt(prompt('¿Cuántas prendas desea comprar?'));
+//                 }
+//       precioCompra += precioProducto * cantidad;
+//       seguirComprando = confirm("¿Querés agregar otra prenda?");
+//       } while (seguirComprando)
+//       return precioCompra;
+//       }
 
-      let pago = 0;
-      let tarjeta = 0;
-      let descuento = 0;
-      let precioFinal =0;
-      const formaDePago = (precioCompra) => {
-          do {
-          pago = parseInt(prompt('Seleccione la forma de pago que desee:\n1) Efectivo (Descuento del 10% en compra superior o igual a $30.000.);\n2) Tarjeta (3 o 6 cuotas sin interés).'));
-              } while (pago != 1 && pago != 2);
-              if (pago === 2) {
-                    do {
-                    tarjeta = parseInt(prompt('Seleccione la opción según correponda a su prefeencia de cuotas a pagar:\n1) 3 cuotas sin interés;\n2) 6 cuotas sin interés.'));
-                     } while (tarjeta != 1 && tarjeta != 2);
-                     if (tarjeta === 1) {
-                              (alert('Su compra se realizó en 3 cuotas sin interés de $' + (precioCompra / 3).toFixed(2) + '.'));
-                     } else {
-                              (alert('Su compra se realizó en 6 cuotas sin interés de $' + (precioCompra / 6).toFixed(2) + '.'));
-                     }
-                     return precioCompra;
-              } else if (pago === 1 && precioCompra >= 30000) {
-                descuento = precioCompra*0.10;
-                precioFinal= (precioCompra - descuento);
-                    alert('Por su compra en efectivo de más de $30000, su descuento es de: $' + descuento + '. La compra se realizó en $' + precioFinal + '.');
-                    return precioFinal;
-              } else if (pago === 1 && precioCompra < 30000) {
-                    return precioCompra;
-              }
-      }
+//       let pago = 0;
+//       let tarjeta = 0;
+//       let descuento = 0;
+//       let precioFinal =0;
+//       const formaDePago = (precioCompra) => {
+//           do {
+//           pago = parseInt(prompt('Seleccione la forma de pago que desee:\n1) Efectivo (Descuento del 10% en compra superior o igual a $30.000.);\n2) Tarjeta (3 o 6 cuotas sin interés).'));
+//               } while (pago != 1 && pago != 2);
+//               if (pago === 2) {
+//                     do {
+//                     tarjeta = parseInt(prompt('Seleccione la opción según correponda a su prefeencia de cuotas a pagar:\n1) 3 cuotas sin interés;\n2) 6 cuotas sin interés.'));
+//                      } while (tarjeta != 1 && tarjeta != 2);
+//                      if (tarjeta === 1) {
+//                               (alert('Su compra se realizó en 3 cuotas sin interés de $' + (precioCompra / 3).toFixed(2) + '.'));
+//                      } else {
+//                               (alert('Su compra se realizó en 6 cuotas sin interés de $' + (precioCompra / 6).toFixed(2) + '.'));
+//                      }
+//                      return precioCompra;
+//               } else if (pago === 1 && precioCompra >= 30000) {
+//                 descuento = precioCompra*0.10;
+//                 precioFinal= (precioCompra - descuento);
+//                     alert('Por su compra en efectivo de más de $30000, su descuento es de: $' + descuento + '. La compra se realizó en $' + precioFinal + '.');
+//                     return precioFinal;
+//               } else if (pago === 1 && precioCompra < 30000) {
+//                     return precioCompra;
+//               }
+//       }
 
-      let envio = 0;
-      const calcularEnvio = (precioCompra, precioFinal) => {
-          do {
-          envio = parseInt(prompt('¿Querés envío a domicilio? (costo adicional $500 en ciudad o alrededores).\n1) Si;\n2) No.'));
-          }
-                while (envio != 1 && envio != 2);
-                if (envio === 1 && precioCompra >= 30000){
-                    return precioFinal;
-                          alert('El precio total de tu compra + el envío es de: $' + (precioFinal + 500) + '.');
-                } else if (envio === 1){
-                    alert('El precio total de tu compra + el envío es de: $' + (precioCompra + 500) + '.');
-                } else if (envio === 2 && precioCompra >=30000) {
-                        alert('El precio total de tu compra es de: $' + precioFinal + '.');
-                        return precioFinal;
-                } else if (envio === 2) {
-                alert('El precio total de tu compra es de: $' + precioCompra + '.');
-                }
-      return precioCompra;
-      }
+//       let envio = 0;
+//       const calcularEnvio = (precioCompra, precioFinal) => {
+//           do {
+//           envio = parseInt(prompt('¿Querés envío a domicilio? (costo adicional $500 en ciudad o alrededores).\n1) Si;\n2) No.'));
+//           }
+//                 while (envio != 1 && envio != 2);
+//                 if (envio === 1 && precioCompra >= 30000){
+//                     return precioFinal;
+//                           alert('El precio total de tu compra + el envío es de: $' + (precioFinal + 500) + '.');
+//                 } else if (envio === 1){
+//                     alert('El precio total de tu compra + el envío es de: $' + (precioCompra + 500) + '.');
+//                 } else if (envio === 2 && precioCompra >=30000) {
+//                         alert('El precio total de tu compra es de: $' + precioFinal + '.');
+//                         return precioFinal;
+//                 } else if (envio === 2) {
+//                 alert('El precio total de tu compra es de: $' + precioCompra + '.');
+//                 }
+//       return precioCompra;
+//       }
       
-      calcularEnvio(formaDePago(comprarProductos()));
-      alert('Desde Guilbas Urban Wear agradecemos tu compra, te esperamos pronto!');
-            </script>
+//       calcularEnvio(formaDePago(comprarProductos()));
+//       alert('Desde Guilbas Urban Wear agradecemos tu compra, te esperamos pronto!');
+//             </script>
 
         </main>
 
